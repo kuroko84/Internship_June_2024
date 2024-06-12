@@ -1,0 +1,15 @@
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\ClassAnimal\ClassAnimal\bin\Debug\net8.0\ClassAnimal.exe
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\ClassAnimal\ClassAnimal\bin\Debug\net8.0\ClassAnimal.deps.json
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\ClassAnimal\ClassAnimal\bin\Debug\net8.0\ClassAnimal.runtimeconfig.json
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\ClassAnimal\ClassAnimal\bin\Debug\net8.0\ClassAnimal.dll
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\ClassAnimal\ClassAnimal\bin\Debug\net8.0\ClassAnimal.pdb
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\ClassAnimal\ClassAnimal\obj\Debug\net8.0\ClassAnimal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\ClassAnimal\ClassAnimal\obj\Debug\net8.0\ClassAnimal.AssemblyInfoInputs.cache
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\ClassAnimal\ClassAnimal\obj\Debug\net8.0\ClassAnimal.AssemblyInfo.cs
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\ClassAnimal\ClassAnimal\obj\Debug\net8.0\ClassAnimal.csproj.CoreCompileInputs.cache
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\ClassAnimal\ClassAnimal\obj\Debug\net8.0\ClassAnimal.sourcelink.json
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\ClassAnimal\ClassAnimal\obj\Debug\net8.0\ClassAnimal.dll
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\ClassAnimal\ClassAnimal\obj\Debug\net8.0\refint\ClassAnimal.dll
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\ClassAnimal\ClassAnimal\obj\Debug\net8.0\ClassAnimal.pdb
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\ClassAnimal\ClassAnimal\obj\Debug\net8.0\ClassAnimal.genruntimeconfig.cache
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\ClassAnimal\ClassAnimal\obj\Debug\net8.0\ref\ClassAnimal.dll

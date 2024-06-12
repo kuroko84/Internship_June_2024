@@ -1,0 +1,29 @@
+Lập trình Hướng đối tượng (OOP) là một phương pháp lập trình trong đó chương trình
+được tổ chức xung quanh các đối tượng, mỗi đối tượng biểu diễn một thực thể trong
+thế giới thực. Mỗi đối tượng có các thuộc tính (dữ liệu) và phương thức (hành vi) 
+liên quan đến nó. OOP giúp tăng tính cấu trúc, sự linh hoạt và tái sử dụng mã nguồn.
+
+Các khái niệm chính của OOP:
+Lớp và Đối tượng (Class and Object):
+	Lớp (Class) là một mẫu (template) cho việc tạo ra các đối tượng. Nó định 
+	nghĩa các thuộc tính và phương thức chung cho các đối tượng.
+
+	Đối tượng (Object) là một thể hiện cụ thể của một lớp, có thể được sử dụng 
+	để thực hiện các hành động và lưu trữ dữ liệu.
+
+Tính trừu tượng (Abstraction): Tính trừu tượng là quá trình tạo ra các lớp cơ sở 
+(base class) và các phương thức trừu tượng (abstract methods) để định nghĩa các giao
+ diện chung mà các lớp con có thể triển khai. Nó cho phép ẩn đi các chi tiết triển
+ khai cụ thể và tập trung vào các khía cạnh quan trọng của vấn đề.
+
+Tính đóng gói (Encapsulation): Tính đóng gói là quá trình che giấu thông tin và các
+chi tiết triển khai của một đối tượng, chỉ hiển thị những phương thức công khai cần
+thiết để tương tác với nó.
+
+Tính kế thừa (Inheritance): Tính kế thừa cho phép một lớp kế thừa các thuộc tính và
+phương thức từ một lớp khác. Điều này giúp tái sử dụng mã nguồn và tạo ra mối quan 
+hệ "lớp cha - lớp con".
+
+Tính đa hình (Polymorphism): Tính đa hình cho phép một phương thức hoạt động khác 
+nhau tùy thuộc vào loại đối tượng mà nó được gọi. Điều này giúp đơn giản hóa mã nguồn
+và tăng tính linh hoạt của chương trình.

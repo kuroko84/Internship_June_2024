@@ -1,0 +1,15 @@
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoCollections\DemoCollections\bin\Debug\net8.0\DemoCollections.exe
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoCollections\DemoCollections\bin\Debug\net8.0\DemoCollections.deps.json
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoCollections\DemoCollections\bin\Debug\net8.0\DemoCollections.runtimeconfig.json
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoCollections\DemoCollections\bin\Debug\net8.0\DemoCollections.dll
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoCollections\DemoCollections\bin\Debug\net8.0\DemoCollections.pdb
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoCollections\DemoCollections\obj\Debug\net8.0\DemoCollections.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoCollections\DemoCollections\obj\Debug\net8.0\DemoCollections.AssemblyInfoInputs.cache
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoCollections\DemoCollections\obj\Debug\net8.0\DemoCollections.AssemblyInfo.cs
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoCollections\DemoCollections\obj\Debug\net8.0\DemoCollections.csproj.CoreCompileInputs.cache
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoCollections\DemoCollections\obj\Debug\net8.0\DemoCollections.sourcelink.json
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoCollections\DemoCollections\obj\Debug\net8.0\DemoCollections.dll
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoCollections\DemoCollections\obj\Debug\net8.0\refint\DemoCollections.dll
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoCollections\DemoCollections\obj\Debug\net8.0\DemoCollections.pdb
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoCollections\DemoCollections\obj\Debug\net8.0\DemoCollections.genruntimeconfig.cache
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoCollections\DemoCollections\obj\Debug\net8.0\ref\DemoCollections.dll

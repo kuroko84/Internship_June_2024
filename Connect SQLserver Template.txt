@@ -1,0 +1,19 @@
+using System.Data.SqlClient;
+using System.Data;
+
+private void button1_Click(object sender, EventArgs e)
+{
+	string connectionString = @"Data Source=desktop-nr76il4;
+				Initial Catalog=test;
+				Integrated Security=True;
+				Encrypt=False";
+	using (SqlConnection sqlCon = new SqlConnection(connectionString))
+	{
+        	sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("Select * from users", sqlCon);
+                DataTable dtbl = new DataTable();
+
+                sqlDa.Fill(dtbl);
+                dataGridView1.DataSource = dtbl;
+	}
+}

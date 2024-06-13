@@ -10,7 +10,8 @@ namespace TestWF
 {
     public partial class TestWF : Form
     {
-        string connectionString = "Data Source=desktop-nr76il4;Initial Catalog=test;Integrated Security=True;Encrypt=False";
+        string connectionString = @"Data Source=desktop-nr76il4;Initial Catalog=test;
+                                    Integrated Security=True;Encrypt=False";
         public TestWF()
         {
             InitializeComponent();

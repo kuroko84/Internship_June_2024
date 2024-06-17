@@ -1,0 +1,15 @@
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoThread\DemoThread\bin\Debug\net8.0\DemoThread.exe
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoThread\DemoThread\bin\Debug\net8.0\DemoThread.deps.json
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoThread\DemoThread\bin\Debug\net8.0\DemoThread.runtimeconfig.json
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoThread\DemoThread\bin\Debug\net8.0\DemoThread.dll
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoThread\DemoThread\bin\Debug\net8.0\DemoThread.pdb
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoThread\DemoThread\obj\Debug\net8.0\DemoThread.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoThread\DemoThread\obj\Debug\net8.0\DemoThread.AssemblyInfoInputs.cache
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoThread\DemoThread\obj\Debug\net8.0\DemoThread.AssemblyInfo.cs
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoThread\DemoThread\obj\Debug\net8.0\DemoThread.csproj.CoreCompileInputs.cache
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoThread\DemoThread\obj\Debug\net8.0\DemoThread.sourcelink.json
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoThread\DemoThread\obj\Debug\net8.0\DemoThread.dll
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoThread\DemoThread\obj\Debug\net8.0\refint\DemoThread.dll
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoThread\DemoThread\obj\Debug\net8.0\DemoThread.pdb
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoThread\DemoThread\obj\Debug\net8.0\DemoThread.genruntimeconfig.cache
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\DemoThread\DemoThread\obj\Debug\net8.0\ref\DemoThread.dll

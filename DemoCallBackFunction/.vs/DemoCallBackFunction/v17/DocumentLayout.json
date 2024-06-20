@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Hii\\source\\repos\\DemoCallBackFunction\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CC7EC2FD-C166-4F16-B33A-C5ECACE97151}|DemoCallBackFunction\\DemoCallBackFunction.csproj|c:\\users\\hii\\source\\repos\\democallbackfunction\\democallbackfunction\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC7EC2FD-C166-4F16-B33A-C5ECACE97151}|DemoCallBackFunction\\DemoCallBackFunction.csproj|solutionrelative:democallbackfunction\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 204,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Hii\\source\\repos\\DemoCallBackFunction\\DemoCallBackFunction\\Program.cs",
+              "RelativeDocumentMoniker": "DemoCallBackFunction\\Program.cs",
+              "ToolTip": "C:\\Users\\Hii\\source\\repos\\DemoCallBackFunction\\DemoCallBackFunction\\Program.cs",
+              "RelativeToolTip": "DemoCallBackFunction\\Program.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAgwEYAAABmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T02:52:57.314Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

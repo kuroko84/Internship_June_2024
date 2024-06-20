@@ -1,0 +1,14 @@
+C:\Users\Hii\source\repos\DemoCallBackFunction\DemoCallBackFunction\obj\Debug\net8.0\DemoCallBackFunction.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hii\source\repos\DemoCallBackFunction\DemoCallBackFunction\obj\Debug\net8.0\DemoCallBackFunction.AssemblyInfoInputs.cache
+C:\Users\Hii\source\repos\DemoCallBackFunction\DemoCallBackFunction\obj\Debug\net8.0\DemoCallBackFunction.AssemblyInfo.cs
+C:\Users\Hii\source\repos\DemoCallBackFunction\DemoCallBackFunction\obj\Debug\net8.0\DemoCallBackFunction.csproj.CoreCompileInputs.cache
+C:\Users\Hii\source\repos\DemoCallBackFunction\DemoCallBackFunction\bin\Debug\net8.0\DemoCallBackFunction.exe
+C:\Users\Hii\source\repos\DemoCallBackFunction\DemoCallBackFunction\bin\Debug\net8.0\DemoCallBackFunction.deps.json
+C:\Users\Hii\source\repos\DemoCallBackFunction\DemoCallBackFunction\bin\Debug\net8.0\DemoCallBackFunction.runtimeconfig.json
+C:\Users\Hii\source\repos\DemoCallBackFunction\DemoCallBackFunction\bin\Debug\net8.0\DemoCallBackFunction.dll
+C:\Users\Hii\source\repos\DemoCallBackFunction\DemoCallBackFunction\bin\Debug\net8.0\DemoCallBackFunction.pdb
+C:\Users\Hii\source\repos\DemoCallBackFunction\DemoCallBackFunction\obj\Debug\net8.0\DemoCallBackFunction.dll
+C:\Users\Hii\source\repos\DemoCallBackFunction\DemoCallBackFunction\obj\Debug\net8.0\refint\DemoCallBackFunction.dll
+C:\Users\Hii\source\repos\DemoCallBackFunction\DemoCallBackFunction\obj\Debug\net8.0\DemoCallBackFunction.pdb
+C:\Users\Hii\source\repos\DemoCallBackFunction\DemoCallBackFunction\obj\Debug\net8.0\DemoCallBackFunction.genruntimeconfig.cache
+C:\Users\Hii\source\repos\DemoCallBackFunction\DemoCallBackFunction\obj\Debug\net8.0\ref\DemoCallBackFunction.dll

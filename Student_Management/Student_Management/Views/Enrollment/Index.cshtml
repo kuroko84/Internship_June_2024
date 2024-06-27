@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Enrollment>
+
+@{
+    ViewData["Title"] = "Enrollments";
+}
+<h2 class="title h2">@ViewData["Title"]</h2>
+<form>
+    <table id="TableShowEnrollment" class="table table-responsive-md table-striped table-bordered table-hover">
+        <thead class="table-active">
+            <tr>
+                <th>Student</th>
+                <th>Class</th>
+                <th>Subject</th>
+                <th>Status</th>
+@*                 <th>Action</th> *@
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Student.Name</td>
+                        <td>@item.Class.Name</td>
+                        <td>@item.Class.Subject.Name</td>
+                        <td>
+                            @if(item.Status == 1)
+                            {
+                                <span class="text-success fw-bold">Studying</span>
+                            } else {
+                                <span class="text-danger fw-bold">Cancel</span>
+                            }
+                        </td>
+                        @* <td>
+                            <div class="btn-group btn-group-sm ">
+                                <a asp-controller="Enrollment"
+                                   asp-action="More"
+                                   asp-route-Id="#"
+                                   class="btn btn-primary">
+                                    More
+                                </a>
+                            </div>
+                        </td> *@
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="4">No Student found.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>

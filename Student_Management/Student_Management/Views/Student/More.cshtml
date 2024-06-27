@@ -1,0 +1,29 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Create Student";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h4>Student</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="Id" value="@Model.Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Name</label>
+                <input asp-for="Name" class="form-control" value="@Model.Name"/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateOfBirth" class="control-label">Ngày sinh</label>
+                <input asp-for="DateOfBirth" class="form-control" type="date" value="@Model.DateOfBirth.ToString("yyyy-MM-dd")" />
+                <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary mt-2" />
+            </div>
+        </form>
+    </div>
+</div>

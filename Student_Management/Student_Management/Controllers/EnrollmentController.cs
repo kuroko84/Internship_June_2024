@@ -8,7 +8,7 @@ namespace Student_Management.Controllers
     {
         private readonly StudentDbContext _studentDbContext;
 
-        // Constructor duy nhất với tham số StudentDbContext
+        // Lâu lâu lỗi constructor, tắt mở lại :))))
         public EnrollmentController(StudentDbContext studentDbContext)
         {
             _studentDbContext = studentDbContext;

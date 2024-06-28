@@ -66,7 +66,7 @@ namespace Student_Management.Controllers
         [HttpPost]
         public IActionResult EditSubject(Subject subject)
         {
-            // Tìm sinh viên cần chỉnh sửa trong cơ sở dữ liệu
+            // Tìm môn cần chỉnh sửa trong cơ sở dữ liệu
             var existingSubject = _studentDbContext.Subjects.SingleOrDefault(s => s.Id == subject.Id);
 
             existingSubject.Name = subject.Name;

@@ -3,60 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\controllers\\scorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\controllers\\scorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\views\\subject\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\views\\subject\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\models\\score.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\models\\score.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\controllers\\classcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\controllers\\classcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\views\\score\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\views\\score\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\views\\class\\aranageclass.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\views\\class\\aranageclass.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\views\\class\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\views\\class\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\dbcontext\\studentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\dbcontext\\studentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\dbcontext\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\dbcontext\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\views\\class\\aranageclass.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\views\\class\\aranageclass.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\controllers\\scorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\controllers\\scorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\migrations\\20240628024726_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\migrations\\20240628024726_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|c:\\users\\hii\\desktop\\internship\\internship_june_2024\\student_management\\student_management\\controllers\\enrollmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFE46036-580E-4FB9-9C4F-7E27DD3BF56D}|Student_Management\\Student_Management.csproj|solutionrelative:student_management\\controllers\\enrollmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,194 +46,128 @@
       "DocumentGroups": [
         {
           "DockedWidth": 216,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "20240628024726_Initial.cs",
-              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Migrations\\20240628024726_Initial.cs",
-              "RelativeDocumentMoniker": "Student_Management\\Migrations\\20240628024726_Initial.cs",
-              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Migrations\\20240628024726_Initial.cs",
-              "RelativeToolTip": "Student_Management\\Migrations\\20240628024726_Initial.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T02:47:26.46Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Student_Management\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Student_Management\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-28T02:44:20.194Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Views\\Class\\Index.cshtml",
-              "RelativeDocumentMoniker": "Student_Management\\Views\\Class\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Views\\Class\\Index.cshtml",
-              "RelativeToolTip": "Student_Management\\Views\\Class\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-28T02:44:18.134Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Views\\Score\\Index.cshtml",
-              "RelativeDocumentMoniker": "Student_Management\\Views\\Score\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Views\\Score\\Index.cshtml",
-              "RelativeToolTip": "Student_Management\\Views\\Score\\Index.cshtml",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAADcAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-28T02:41:42.383Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ScoreController.cs",
-              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Controllers\\ScoreController.cs",
-              "RelativeDocumentMoniker": "Student_Management\\Controllers\\ScoreController.cs",
-              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Controllers\\ScoreController.cs",
-              "RelativeToolTip": "Student_Management\\Controllers\\ScoreController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAowDQAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T02:38:05.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SeedData.cs",
-              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\DBContext\\SeedData.cs",
-              "RelativeDocumentMoniker": "Student_Management\\DBContext\\SeedData.cs",
-              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\DBContext\\SeedData.cs",
-              "RelativeToolTip": "Student_Management\\DBContext\\SeedData.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAgwEsAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T02:36:46.287Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Subject.cs",
-              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Models\\Subject.cs",
-              "RelativeDocumentMoniker": "Student_Management\\Models\\Subject.cs",
-              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Models\\Subject.cs",
-              "RelativeToolTip": "Student_Management\\Models\\Subject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T02:34:15.788Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Models\\Student.cs",
-              "RelativeDocumentMoniker": "Student_Management\\Models\\Student.cs",
-              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Models\\Student.cs",
-              "RelativeToolTip": "Student_Management\\Models\\Student.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T02:30:07.957Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "StudentDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\DBContext\\StudentDbContext.cs",
-              "RelativeDocumentMoniker": "Student_Management\\DBContext\\StudentDbContext.cs",
-              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\DBContext\\StudentDbContext.cs",
-              "RelativeToolTip": "Student_Management\\DBContext\\StudentDbContext.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAwwD0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T02:28:21.844Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Views\\Subject\\Index.cshtml",
+              "RelativeDocumentMoniker": "Student_Management\\Views\\Subject\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Views\\Subject\\Index.cshtml",
+              "RelativeToolTip": "Student_Management\\Views\\Subject\\Index.cshtml",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAGkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-28T03:32:47.558Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Score.cs",
-              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Models\\Score.cs",
-              "RelativeDocumentMoniker": "Student_Management\\Models\\Score.cs",
-              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Models\\Score.cs",
-              "RelativeToolTip": "Student_Management\\Models\\Score.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T02:26:25.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Class.cs",
-              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Models\\Class.cs",
-              "RelativeDocumentMoniker": "Student_Management\\Models\\Class.cs",
-              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Models\\Class.cs",
-              "RelativeToolTip": "Student_Management\\Models\\Class.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T08:32:27.144Z"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 216,
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AranageClass.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Views\\Class\\AranageClass.cshtml",
-              "RelativeDocumentMoniker": "Student_Management\\Views\\Class\\AranageClass.cshtml",
-              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Views\\Class\\AranageClass.cshtml",
-              "RelativeToolTip": "Student_Management\\Views\\Class\\AranageClass.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAABBAAAA",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Views\\Student\\Index.cshtml",
+              "RelativeDocumentMoniker": "Student_Management\\Views\\Student\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Views\\Student\\Index.cshtml",
+              "RelativeToolTip": "Student_Management\\Views\\Student\\Index.cshtml",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAFYAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-28T03:06:40.36Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SubjectController.cs",
-              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Controllers\\SubjectController.cs",
-              "RelativeDocumentMoniker": "Student_Management\\Controllers\\SubjectController.cs",
-              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Controllers\\SubjectController.cs",
-              "RelativeToolTip": "Student_Management\\Controllers\\SubjectController.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAIwFoAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T03:16:06.369Z",
+              "WhenOpened": "2024-06-28T03:32:27.03Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ClassController.cs",
-              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Controllers\\ClassController.cs",
-              "RelativeDocumentMoniker": "Student_Management\\Controllers\\ClassController.cs",
-              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Controllers\\ClassController.cs",
-              "RelativeToolTip": "Student_Management\\Controllers\\ClassController.cs",
-              "ViewState": "AQIAAKcAAAAAAAAAAAAowL0AAABUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T08:22:09.51Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Student_Management\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Student_Management\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAFAAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-28T03:32:11.048Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SubjectController.cs",
+              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Controllers\\SubjectController.cs",
+              "RelativeDocumentMoniker": "Student_Management\\Controllers\\SubjectController.cs",
+              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Controllers\\SubjectController.cs",
+              "RelativeToolTip": "Student_Management\\Controllers\\SubjectController.cs",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAmwEQAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T03:29:45.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "Student_Management\\Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "Student_Management\\Controllers\\StudentController.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowCgAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T03:27:24.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ScoreController.cs",
+              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Controllers\\ScoreController.cs",
+              "RelativeDocumentMoniker": "Student_Management\\Controllers\\ScoreController.cs",
+              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Controllers\\ScoreController.cs",
+              "RelativeToolTip": "Student_Management\\Controllers\\ScoreController.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAA5wBgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T03:26:41.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Student_Management\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Student_Management\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T03:26:10.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AranageClass.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Views\\Class\\AranageClass.cshtml",
+              "RelativeDocumentMoniker": "Student_Management\\Views\\Class\\AranageClass.cshtml",
+              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Views\\Class\\AranageClass.cshtml",
+              "RelativeToolTip": "Student_Management\\Views\\Class\\AranageClass.cshtml",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAAAI4AAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-28T03:25:30.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EnrollmentController.cs",
+              "DocumentMoniker": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Controllers\\EnrollmentController.cs",
+              "RelativeDocumentMoniker": "Student_Management\\Controllers\\EnrollmentController.cs",
+              "ToolTip": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\Student_Management\\Student_Management\\Controllers\\EnrollmentController.cs",
+              "RelativeToolTip": "Student_Management\\Controllers\\EnrollmentController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T03:22:56.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
             }
           ]
         }

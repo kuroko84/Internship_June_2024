@@ -198,7 +198,7 @@ namespace Student_Management.Controllers
 
                 TempData["DeleteClassSuccess"] = "Class deleted successfully.";
 
-                // Redirect to the current page or specific action
+                // Chuyển Index
                 return RedirectToAction("Index", "Student");
             }
             catch (Exception ex)
@@ -213,7 +213,7 @@ namespace Student_Management.Controllers
         {
             try
             {
-                // Tìm bản ghi Enrollment dựa vào studentId và classId
+                // Tìm Enrollment dựa vào studentId và classId
                 var enrollmentOfStudentToUpdate = await _studentDbContext.Enrollments
                     .FirstOrDefaultAsync(x => x.StudentId == Id && x.ClassId == ClassId);
 
@@ -228,7 +228,7 @@ namespace Student_Management.Controllers
                 await _studentDbContext.SaveChangesAsync();
 
 
-                // Redirect to the current page or specific action
+                // Chuyển View
                 return RedirectToAction("AranageClass", "Class", new {Id = ClassId });
             }
             catch (Exception ex)

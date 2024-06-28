@@ -111,7 +111,7 @@
                         var message = 'Score updated successfully.';
                         console.log(message);
                         alert(message);
-                        //Reload page after successful update (optional)
+                        //Reload page
                         // location.reload();
                     } else {
                         var errorMessage = data.error ? data.error : 'Unknown error occurred.';
@@ -140,8 +140,8 @@
                         ClassId: classId
                     },
                     success: function (data) {
-                        var message = 'Delete successfully'; // Sửa thành var message
-                        console.log(message); // Sửa thành message
+                        var message = 'Delete successfully';
+                        console.log(message); 
                         //Reload page after successful update (optional)
                         location.reload();
                     },

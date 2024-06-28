@@ -15,6 +15,7 @@ namespace Student_Management.Controllers
         }
         public IActionResult Index()
         {
+            // Show scores
             var scores = _studentDbContext.Scores
                 .Include(c => c.Student)
                 .Include(c => c.Subject)
@@ -22,16 +23,13 @@ namespace Student_Management.Controllers
                 .ToList();
             return View(scores);
         }
-        public IActionResult Grading()
-        {
-            return View();
-        }
         // POST: Delete
         [HttpPost]
         public async Task<IActionResult> Delete(int classId, int studentId, int subjectId)
         {
             try
             {
+                // Tìm score cần xóa, id trung classId và studentId và subjectId
                 Score scoreToDelete = await _studentDbContext.Scores
                     .SingleOrDefaultAsync(x => x.ClassId == classId && x.StudentId == studentId && x.SubjectId == subjectId);
 

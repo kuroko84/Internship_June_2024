@@ -20,6 +20,7 @@ namespace Student_Management.Controllers
 
         public IActionResult Index()
         {
+            // Show students
             var students = _studentDbContext.Students
                 .Include(s => s.Enrollments)
                 .Include(e => e.Scores)
@@ -29,6 +30,7 @@ namespace Student_Management.Controllers
 
         public IActionResult More(int Id)
         {
+            // Trang xem thêm thông tin
             Student newStudent = _studentDbContext.Students.SingleOrDefault(s => s.Id == Id);
             return View(newStudent);
         }
@@ -36,9 +38,9 @@ namespace Student_Management.Controllers
         [HttpPost]
         public IActionResult Edit(Student student)
         {
-            // Tìm sinh viên cần chỉnh sửa trong cơ sở dữ liệu
+            // Tìm sinh viên cần chỉnh sửa
             var existingStudent = _studentDbContext.Students.SingleOrDefault(s => s.Id == student.Id);
-
+            // Cập nhật thông tin
             existingStudent.Name = student.Name;
             existingStudent.DateOfBirth = student.DateOfBirth;
 
@@ -62,24 +64,19 @@ namespace Student_Management.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddStudent(Student student)
         {
-            _logger.LogInformation("Received Student: {@student}", student); // Logging to check received data
-
+            _logger.LogInformation("Received Student: {@student}", student);
+            // Nhiều khi ko cần thiết lawmcs cái Modelstate!!! LỖI
             if (ModelState.IsValid)
             {
-               
-                if (ModelState.IsValid)
+                Student newStudent = new Student
                 {
-                    Student newStudent = new Student
-                    {
-                        Name = student.Name,
-                        DateOfBirth = student.DateOfBirth
-                    };
-                    _studentDbContext.Students.Add(newStudent);
-                    await _studentDbContext.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
-                }
+                    Name = student.Name,
+                    DateOfBirth = student.DateOfBirth
+                };
+                _studentDbContext.Students.Add(newStudent);
+                await _studentDbContext.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-
             _logger.LogWarning("ModelState is invalid. Errors: {@errors}", ModelState.Values);
 
             foreach (var modelState in ModelState.Values)
@@ -99,6 +96,7 @@ namespace Student_Management.Controllers
         {
             try
             {
+                // Tìm student để xóa
                 Student studentToDelete = _studentDbContext.Students.FirstOrDefault(x => x.Id == Id);
                 if (studentToDelete == null)
                 {

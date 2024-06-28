@@ -34,5 +34,8 @@ namespace Student_Management.Models
 
 		//Quan hệ 1-n với Enrollment
 		public ICollection<Enrollment>? Enrollments { get; set; }
-	}
+
+        //Quan hệ 1-n với score
+        public ICollection<Score>? Scores { get; set; }
+    }
 }

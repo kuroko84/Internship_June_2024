@@ -4,9 +4,6 @@ namespace Student_Management.Models
 {
 	public class Score
 	{
-		[Key]
-		public int Id { get; set; }
-
 		//Điểm số
 		[Required]
 		public double Mark { get; set; }
@@ -18,5 +15,9 @@ namespace Student_Management.Models
 		// Khóa ngoại đến Student
 		public int? StudentId { get; set; }
 		public Student Student { get; set; }
-	}
+
+        // Khóa ngoại đến Class
+        public int? ClassId { get; set; }
+        public Class Class { get; set; }
+    }
 }

@@ -65,13 +65,15 @@ namespace Student_Management.DBContext
 					{
 						Subject = physics,
 						Student = john,
-						Mark = 9
+                        Class = physicsClass,
+                        Mark = 9
 					},
 					new Score
 					{
 						Subject = mathematics,
 						Student = jane,
-						Mark = 9.5
+						Class = mathClass,
+                        Mark = 9.5
 					}
 				);
 

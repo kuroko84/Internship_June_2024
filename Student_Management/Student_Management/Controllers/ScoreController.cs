@@ -18,6 +18,7 @@ namespace Student_Management.Controllers
             var scores = _studentDbContext.Scores
                 .Include(c => c.Student)
                 .Include(c => c.Subject)
+                .Include(c => c.Class)
                 .ToList();
             return View(scores);
         }
@@ -27,11 +28,13 @@ namespace Student_Management.Controllers
         }
         // POST: Delete
         [HttpPost]
-        public async Task<IActionResult> Delete(int Id)
+        public async Task<IActionResult> Delete(int classId, int studentId, int subjectId)
         {
             try
             {
-                Score scoreToDelete = _studentDbContext.Scores.FirstOrDefault(x => x.Id == Id);
+                Score scoreToDelete = await _studentDbContext.Scores
+                    .SingleOrDefaultAsync(x => x.ClassId == classId && x.StudentId == studentId && x.SubjectId == subjectId);
+
                 if (scoreToDelete == null)
                 {
                     return NotFound();
@@ -50,5 +53,6 @@ namespace Student_Management.Controllers
                 return BadRequest(new { error = ex.Message });
             }
         }
+
     }
 }

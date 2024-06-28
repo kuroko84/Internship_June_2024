@@ -78,24 +78,21 @@ namespace Student_Management.Migrations
 
             modelBuilder.Entity("Student_Management.Models.Score", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int?>("StudentId")
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<double>("Mark")
-                        .HasColumnType("float");
-
-                    b.Property<int?>("StudentId")
+                    b.Property<int?>("ClassId")
                         .HasColumnType("int");
 
                     b.Property<int?>("SubjectId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.Property<double>("Mark")
+                        .HasColumnType("float");
 
-                    b.HasIndex("StudentId");
+                    b.HasKey("StudentId", "ClassId", "SubjectId");
+
+                    b.HasIndex("ClassId");
 
                     b.HasIndex("SubjectId");
 
@@ -175,15 +172,25 @@ namespace Student_Management.Migrations
 
             modelBuilder.Entity("Student_Management.Models.Score", b =>
                 {
+                    b.HasOne("Student_Management.Models.Class", "Class")
+                        .WithMany("Scores")
+                        .HasForeignKey("ClassId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("Student_Management.Models.Student", "Student")
                         .WithMany("Scores")
                         .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.HasOne("Student_Management.Models.Subject", "Subject")
                         .WithMany("Scores")
                         .HasForeignKey("SubjectId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Class");
 
                     b.Navigation("Student");
 
@@ -193,6 +200,8 @@ namespace Student_Management.Migrations
             modelBuilder.Entity("Student_Management.Models.Class", b =>
                 {
                     b.Navigation("Enrollments");
+
+                    b.Navigation("Scores");
                 });
 
             modelBuilder.Entity("Student_Management.Models.Student", b =>

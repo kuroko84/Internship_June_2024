@@ -17,22 +17,30 @@ namespace Student_Management.DBContext
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
-			// Mối quan hệ 1-n giữa Score và Student
-			modelBuilder.Entity<Score>()
-				.HasOne(sc => sc.Student)
-				.WithMany(s => s.Scores)
-				.HasForeignKey(sc => sc.StudentId)
-				.OnDelete(DeleteBehavior.Restrict); // Thay vì Cascade
+            // Mối quan hệ n-n giữa Student, Class, Subject qua bảng Score
+            modelBuilder.Entity<Score>()
+                .HasKey(e => new { e.StudentId, e.ClassId, e.SubjectId });
 
-			// Mối quan hệ 1-n giữa Score và Subject
-			modelBuilder.Entity<Score>()
-				.HasOne(sc => sc.Subject)
-				.WithMany(sub => sub.Scores)
-				.HasForeignKey(sc => sc.SubjectId)
-				.OnDelete(DeleteBehavior.Restrict); // Thay vì Cascade
+            modelBuilder.Entity<Score>()
+                .HasOne(sc => sc.Student)
+                .WithMany(s => s.Scores)
+                .HasForeignKey(sc => sc.StudentId)
+                .OnDelete(DeleteBehavior.Restrict);
 
-			// Mối quan hệ n-n giữa Student và Class qua bảng Enrollment
-			modelBuilder.Entity<Enrollment>()
+            modelBuilder.Entity<Score>()
+                .HasOne(sc => sc.Subject)
+                .WithMany(sub => sub.Scores)
+                .HasForeignKey(sc => sc.SubjectId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Score>()
+                .HasOne(sc => sc.Class)
+                .WithMany(c => c.Scores)
+                .HasForeignKey(sc => sc.ClassId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Mối quan hệ n-n giữa Student và Class qua bảng Enrollment
+            modelBuilder.Entity<Enrollment>()
 				.HasKey(e => new { e.StudentId, e.ClassId });
 
 			modelBuilder.Entity<Enrollment>()

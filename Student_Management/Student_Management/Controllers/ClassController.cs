@@ -6,6 +6,7 @@ using Student_Management.DBContext;
 using Student_Management.Models;
 using System.Linq;
 using System.Threading.Tasks;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace Student_Management.Controllers
 {
@@ -36,7 +37,6 @@ namespace Student_Management.Controllers
         [HttpPost]
         public async Task<IActionResult> AddClass([FromForm] Class @class)
         {
-            // Xử lý khi ModelState hợp lệ
             // Thêm mới đối tượng Class và lưu vào cơ sở dữ liệu
             Class newClass = new Class
             {
@@ -56,17 +56,25 @@ namespace Student_Management.Controllers
 
         }
 
+        //GET Class/AranageClass
         public async Task<IActionResult> AranageClass(int Id)
         {
+            // Truy vấn lớp được chọn
             var selectedClass = await _studentDbContext.Classes
                 .Include(c => c.Subject) // Bao gồm thông tin môn học của lớp
                 .SingleOrDefaultAsync(e => e.Id == Id);
             ViewData["Title"] = "Add Student To";
 
-            // Lấy danh sách sinh viên trong lớp, bao gồm điểm số và môn học của lớp
+            //// Lấy danh sách sinh viên trong lớp, bao gồm điểm số và môn học của lớp
+            //var studentsInClass = await _studentDbContext.Students
+            //    .Where(s => s.Enrollments.Any(e => e.ClassId == Id && e.Status != 0)) // Sinh viên thuộc lớp học này
+            //    .Include(s => s.Scores
+            //    .Where(score => score.SubjectId == selectedClass.SubjectId && score.Student.Enrollments.Any(e => e.ClassId == Id))) // Chỉ lấy điểm cho môn học của lớp và sinh viên thuộc lớp này
+            //    .ToListAsync();
             var studentsInClass = await _studentDbContext.Students
-                .Where(s => s.Enrollments.Any(e => e.ClassId == Id && e.Status != 0))
-                .Include(s => s.Scores.Where(score => score.SubjectId == selectedClass.SubjectId)) // Chỉ lấy điểm cho môn học của lớp
+                .Where(s => s.Enrollments.Any(e => e.ClassId == Id && e.Status != 0)) // Sinh viên thuộc lớp học này
+                .Include(s => s.Scores
+                    .Where(score => score.ClassId == selectedClass.Id)) // Chỉ lấy điểm cho môn học của lớp và sinh viên thuộc lớp này
                 .ToListAsync();
 
             // Lấy danh sách sinh viên không nằm trong lớp
@@ -87,10 +95,14 @@ namespace Student_Management.Controllers
                 s.Id,
                 s.Name,
                 SubjectId = selectedClass.SubjectId,
-                Mark = s.Scores.FirstOrDefault(score => score.SubjectId == selectedClass.SubjectId)?.Mark ?? -1 // Lấy điểm số cho môn học của lớp
+                // Lấy điểm số cho môn học của lớp
+                // Hiển thị -1 nếu chưa có điểm, ko khởi tạo
+                Mark = s.Scores.FirstOrDefault(score => score.SubjectId == selectedClass.SubjectId)?.Mark ?? -1 
             }).ToList();
-
+            //Student ko có trong class để có thể thêm vào class
             ViewBag.Students = studentsNotInClassItems;
+
+            //Student đã có trong class, ko thêm
             ViewBag.StudentInClass = studentWithScores;
             ViewBag.ClassId = Id;
             ViewBag.Name = selectedClass.Name;
@@ -101,12 +113,13 @@ namespace Student_Management.Controllers
         }
 
 
-        // POST: /Class/AranageClass
+        // POST: /Class/AddAranageClass
         [HttpPost]
         public async Task<IActionResult> AddAranageClass(Enrollment enroll)
         {
-            _logger.LogInformation("Received Student: {@student}", enroll); // Logging to check received data
+            _logger.LogInformation("Received Student: {@student}", enroll);
 
+            // Tạo 1 enroll
             if (enroll.StudentId.HasValue)
             {
                 Enrollment newEroll = new Enrollment
@@ -125,6 +138,7 @@ namespace Student_Management.Controllers
             return RedirectToAction("AranageClass", "Class", new { Id = enroll.ClassId });
         }
 
+        //POST /Class/Index
         public IActionResult Index()
         {
             return View();
@@ -136,28 +150,23 @@ namespace Student_Management.Controllers
         {
             try
             {
-                // Kiểm tra giá trị điểm số hợp lệ (0 <= mark <= 10)
-                if (mark < 0 || mark > 10)
-                {
-                    return Json(new { success = false, error = "Mark must be between 0 and 10." });
-                }
-
                 var scoreToUpdate = await _studentDbContext.Scores
-                    .SingleOrDefaultAsync(s => s.StudentId == studentId && s.SubjectId == subjectId);
-                _logger.LogInformation("Class collected.", studentId);
+                    .SingleOrDefaultAsync(s => s.StudentId == studentId && s.ClassId == classId);
+
                 if (scoreToUpdate != null)
                 {
-                    // Nếu đã có điểm số, cập nhật lại
+                    // Đã có điểm số, cập nhật lại
                     scoreToUpdate.Mark = mark;
                 }
                 else
                 {
-                    // Nếu chưa có điểm số, thêm mới
+                    // Chưa có điểm số, tạo mới và thêm vào
                     scoreToUpdate = new Score
                     {
-                        StudentId = studentId,
+                        Mark = mark,
                         SubjectId = subjectId,
-                        Mark = mark
+                        StudentId = studentId,
+                        ClassId = classId
                     };
 
                     _studentDbContext.Scores.Add(scoreToUpdate);

@@ -1,7 +1,16 @@
 ﻿@model IEnumerable<Student>
 
+
 @{
-    ViewData["Title"] = "Class " + Model.FirstOrDefault().ClassOfStudent.Name;
+    var firstStudent = Model.FirstOrDefault();
+    if (firstStudent != null && firstStudent.ClassOfStudent != null)
+    {
+        ViewData["Title"] = "Class " + firstStudent.ClassOfStudent.Name;
+    }
+    else
+    {
+        ViewData["Title"] = "Class Information";
+    }
 }
 <h2 class="title h2 text-success">@ViewData["Title"]</h2>
 

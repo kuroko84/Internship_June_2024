@@ -25,13 +25,13 @@ namespace Student_Management.Controllers
         }
         // POST: Delete
         [HttpPost]
-        public async Task<IActionResult> Delete(int classId, int studentId, int subjectId)
+        public async Task<IActionResult> Delete(int courseId, int studentId, int subjectId)
         {
             try
             {
                 // Tìm score cần xóa, id trung classId và studentId và subjectId
                 Score scoreToDelete = await _studentDbContext.Scores
-                    .SingleOrDefaultAsync(x => x.CourseId == classId && x.StudentId == studentId && x.SubjectId == subjectId);
+                    .SingleOrDefaultAsync(x => x.CourseId == courseId && x.StudentId == studentId && x.SubjectId == subjectId);
 
                 if (scoreToDelete == null)
                 {

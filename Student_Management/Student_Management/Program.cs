@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Student_Management.DBContext;
+using DinkToPdf;
+using DinkToPdf.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,10 @@ builder.Services.AddDbContext<StudentDbContext>(options =>
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Add DinkToPdf config
+builder.Services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
+
 
 var app = builder.Build();
 

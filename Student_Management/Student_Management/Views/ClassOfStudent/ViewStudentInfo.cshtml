@@ -1,0 +1,30 @@
+﻿@using Student_Management.ViewModels
+@model StudentInfoViewModel
+
+@{
+    ViewData["Title"] = "Student Info";
+}
+
+<h2 class="title h2">@ViewData["Title"]</h2>
+<h3 class="text-success">@Model.ClassName</h3>
+<h3>ID: @Model.Id</h3>
+<h3>Name: @Model.Name</h3>
+<h3>Average Score: @Model.AverageMark.ToString("F2")</h3>
+<table id="TableShowStudent" class="table table-responsive-md table-striped table-bordered table-hover">
+    <thead class="table-active">
+        <tr>
+            <th>Subject</th>
+            <th>Mark</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+        @foreach (var score in Model.Scores)
+        {
+        <tr>
+            <td>@score.SubjectName</td>
+            <td>@score.Mark</td>
+        </tr>
+        }
+    </tbody>
+</table>

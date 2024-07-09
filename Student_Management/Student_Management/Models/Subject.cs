@@ -16,7 +16,7 @@ namespace Student_Management.Models
 		public string Description { get; set; }
 
 		//Quan hệ 1-n với class
-		public ICollection<Class>? Classes { get; set; }
+		public ICollection<Course>? Courses { get; set; }
 
 		//Quan hệ 1-n với score
 		public ICollection<Score>? Scores { get; set; }

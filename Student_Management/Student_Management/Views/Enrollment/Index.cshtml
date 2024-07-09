@@ -9,7 +9,7 @@
         <thead class="table-active">
             <tr>
                 <th>Student</th>
-                <th>Class</th>
+                <th>Course</th>
                 <th>Subject</th>
                 <th>Status</th>
 @*                 <th>Action</th> *@
@@ -22,8 +22,8 @@
                 {
                     <tr>
                         <td>@item.Student.Name</td>
-                        <td>@item.Class.Name</td>
-                        <td>@item.Class.Subject.Name</td>
+                        <td>@item.Course.Name</td>
+                        <td>@item.Course.Subject.Name</td>
                         <td>
                             @if(item.Status == 1)
                             {

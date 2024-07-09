@@ -16,7 +16,7 @@ namespace Student_Management.Controllers
         }
         public IActionResult Index()
         {
-            var subjects = _studentDbContext.Subjects.Include(s => s.Classes).ToList();
+            var subjects = _studentDbContext.Subjects.Include(s => s.Courses).ToList();
             return View(subjects);
         }
         public IActionResult AddSubject()

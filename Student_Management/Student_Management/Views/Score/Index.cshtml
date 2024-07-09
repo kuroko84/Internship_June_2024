@@ -10,7 +10,7 @@
     <thead class="table-active">
         <tr>
             <th>Student Name</th>
-            <th>Class</th>
+            <th>Course</th>
             <th>Subject</th>
             <th>Mark</th>
             <th>Action</th>
@@ -23,12 +23,12 @@
             {
                 <tr>
                     <td>@item.Student.Name</td>
-                    <td>@item.Class.Name</td>
+                    <td>@item.Course.Name</td>
                     <td>@item.Subject.Name</td>
                     <td>@item.Mark</td>
                     <td>
                         <div class="btn-group btn-group-sm">
-                            <a data-classId="@item.ClassId"
+                            <a data-courseId="@item.CourseId"
                                data-studentId="@item.StudentId"
                                data-subjectId="@item.SubjectId"
                                class="btn btn-danger delete-score">
@@ -53,7 +53,7 @@
     $(document).ready(function () {
         $('.delete-score').click(function (e) {
             e.preventDefault();
-            var classId = $(this).data('classid');
+            var courseId = $(this).data('courseid');
             var studentId = $(this).data('studentid');
             var subjectId = $(this).data('subjectid');
 
@@ -62,7 +62,7 @@
                     url: '@Url.Action("Delete", "Score")',
                     type: 'POST',
                     data: {
-                        classId: classId,
+                        courseId: courseId,
                         studentId: studentId,
                         subjectId: subjectId
                     },
@@ -81,8 +81,8 @@
 </script>
 
 <script>
-    var deleteSuccessMessage = '@TempData["DeleteSuccess"]';
-    if (deleteSuccessMessage) {
-        alert(deleteSuccessMessage);
+    var invalid = '@TempData["InvalidData"]';
+    if (invalid) {
+        alert(invalid);
     }
 </script>

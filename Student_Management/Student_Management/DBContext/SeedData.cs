@@ -24,20 +24,30 @@ namespace Student_Management.DBContext
 					Description = "Study of matter, energy, and the interaction between them."
 				};
 
+				// Khởi tạo lớp của sinh viên
+				ClassOfStudent classOfStudent = new ClassOfStudent()
+				{
+					Name = "HTCL 2024",
+					Description = "He Thong Thong Tin Chat Luong Cao 2024",
+					SchoolYear = 2024
+				};				
+
 				//Khởi tạo sinh viên
 				Student john = new Student
 				{
 					Name = "John Doe",
-					DateOfBirth = new DateTime(2000, 1, 1)
+					DateOfBirth = new DateTime(2000, 1, 1),
+					ClassOfStudent = classOfStudent,
 				};
 				Student jane = new Student
 				{
 					Name = "Jane Smith",
-					DateOfBirth = new DateTime(2001, 2, 2)
-				};
+					DateOfBirth = new DateTime(2001, 2, 2),
+                    ClassOfStudent = classOfStudent,
+                };
 
 				//Khởi tạo lớp
-				var mathClass = new Class
+				var mathClass = new Course
 				{
 					Name = "Math Class 101",
 					Description = "Introduction to Mathematics",
@@ -47,8 +57,8 @@ namespace Student_Management.DBContext
 					Subject = mathematics
 				};
 
-				var physicsClass = new Class
-				{
+				var physicsClass = new Course
+                {
 					Name = "Physics Class 101",
 					Description = "Introduction to Physics",
 					NumberOfStudent = 50,
@@ -57,7 +67,7 @@ namespace Student_Management.DBContext
 					Subject = physics
 				};
 
-				_context.Classes.AddRange(mathClass, physicsClass);
+				_context.Courses.AddRange(mathClass, physicsClass);
 
 				//Khởi tạo điểm số
 				_context.Scores.AddRange(
@@ -65,14 +75,14 @@ namespace Student_Management.DBContext
 					{
 						Subject = physics,
 						Student = john,
-                        Class = physicsClass,
+                        Course = physicsClass,
                         Mark = 9
 					},
 					new Score
 					{
 						Subject = mathematics,
 						Student = jane,
-						Class = mathClass,
+                        Course = mathClass,
                         Mark = 9.5
 					}
 				);
@@ -82,13 +92,13 @@ namespace Student_Management.DBContext
 					new Enrollment
 					{
 						Student = john,
-						Class = physicsClass,
+                        Course = physicsClass,
 						Status = 1
 					},
 					new Enrollment
 					{
 						Student = jane,
-						Class = mathClass,
+                        Course = mathClass,
 						Status = 1
 					}
 				);

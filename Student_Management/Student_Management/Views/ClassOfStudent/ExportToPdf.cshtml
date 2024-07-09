@@ -1,0 +1,51 @@
+﻿@model List<object[]>
+
+<h2>Class Report</h2>
+<h3>Class Name: @ViewBag.className</h3>
+<h3>School Year: @ViewBag.schoolYear</h3>
+<table border="1" cellspacing="0" cellpadding="5">
+    <thead>
+        <tr>
+            <th>Num</th>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Average Score</th>
+            <th>Academic Achievement</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var averageScore = (double)item[3];
+            <tr>
+                <td>@item[0]</td>
+                <td>@item[1]</td>
+                <td>@item[2]</td>
+                <td>
+                    @averageScore.ToString("F2")
+                </td>
+                <td>
+                    @if ((double)item[3] >= 8)
+                    {
+                        <span>Exellent</span>
+                    } else if((double)item[3] >= 6.5 && (double)item[3] < 8)
+                    {
+                        <span>Good</span>
+                    }
+                    else if ((double)item[3] < 6.5 && (double)item[3] >= 5)
+                    {
+                        <span>Average</span>
+                    }
+                    else if ((double)item[3] != 0)
+                    {
+                        <span>Weak</span>
+                    }
+                    else
+                    {
+                        <span>Haven't had scores yet</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

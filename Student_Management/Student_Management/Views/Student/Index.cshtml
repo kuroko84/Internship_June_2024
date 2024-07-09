@@ -14,6 +14,7 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>DOB</th>
+                <th>Class Of Student</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -26,9 +27,10 @@
                         <td>@item.Id</td>
                         <td>@item.Name</td>
                         <td>@item.DateOfBirth.ToString("MM/dd/yyyy")</td>
+                        <td>@item.ClassOfStudent.Name</td>
                         <td>
                            
-                            <div class="btn-group btn-group-sm ">
+                            <div class="btn-group btn-group-sm">
                                 <a asp-controller="Student"
                                     asp-action="More"
                                     asp-route-Id="@item.Id"
@@ -36,7 +38,7 @@
                                     Edit
                                 </a>
                             </div>
-                            @if(!item.Enrollments.Any() && !item.Scores.Any())
+                            @if(!item.Enrollments.Any())
                             {
                                 <div class="btn-group btn-group-sm ">
                                     <a href="#"
@@ -54,8 +56,6 @@
                                     </a>
                                 </div>
                             }
-
-                            
                         </td>
                     </tr>
                 }

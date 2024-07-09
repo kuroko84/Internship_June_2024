@@ -20,7 +20,7 @@ namespace Student_Management.Controllers
         public IActionResult Index()
         {
             var classes = _studentDbContext
-                .Classes
+                .Courses
                 .Include(c => c.Subject)
                 .Include(c => c.Enrollments)
                 .ToList();

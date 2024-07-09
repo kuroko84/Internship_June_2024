@@ -1,0 +1,132 @@
+﻿@model IEnumerable<Student>
+
+@{
+    ViewData["Title"] = "Class " + Model.FirstOrDefault().ClassOfStudent.Name;
+}
+<h2 class="title h2 text-success">@ViewData["Title"]</h2>
+
+<div class="row">
+    <div class="col-2">
+        <label><input type="radio" name="filter" id="filterPoor" value="filterPoor" /> Weak (below 5)</label><br />
+    </div>
+    <div class="col-2">
+        <label><input type="radio" name="filter" id="filterAverage" value="filterAverage" /> Average (5 - 6.5)</label><br />
+    </div>
+    <div class="col-2">
+        <label><input type="radio" name="filter" id="filterGood" value="filterGood" /> Good(6.5 - 8)</label><br />
+    </div>
+    <div class="col-2">
+        <label><input type="radio" name="filter" id="filterExcellent" value="filterExcellent" /> Excellent (above  8)</label>
+    </div>
+    <div class="col-2">
+        <label><input type="radio" name="filter" id="filterOff" value="filterOff" /> Default</label>
+    </div>
+    <div class="col-2">
+        @if (Model.Any())
+        {
+            var classId = Model.FirstOrDefault().ClassOfStudentId;
+
+            <a asp-controller="ClassOfStudent" asp-action="ExportToPdf" asp-route-classId="@classId" class="btn btn-success mb-2">
+                Export to PDF
+            </a>
+        }
+    </div>
+</div>
+
+
+<table id="TableShowStudents" class="table table-responsive-md table-striped table-bordered table-hover">
+    <thead class="table-active">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Average score</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>
+                        @{
+                            // Lấy điểm trung bình từ ViewBag.StudentAverages
+                            if (ViewBag.StudentAverages.ContainsKey(item.Id))
+                            {
+                                @ViewBag.StudentAverages[item.Id].ToString("F2")
+                            }
+                            else
+                            {
+                                <text>N/A</text>
+                            }
+                        }
+                    </td>
+                    <td class="text-end">
+                        <div class="btn-group btn-group-sm">
+                            <a asp-controller="ClassOfStudent"
+                               asp-action="ViewStudentInfo"
+                               asp-route-Id="@item.Id"
+                               class="btn btn-primary">
+                                View More About Student
+                            </a>
+                            
+                        </div>
+                        <div class ="btn-group btn-group-sm">
+                            <a asp-controller="ClassOfStudent"
+                               asp-action="ExportStudentToPdf"
+                               asp-route-studentId="@item.Id"
+                               class="btn btn-success">
+                                Export Report
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="6">No Student found.</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('input[type="radio"][name="filter"]').change(function () {
+                var selectedFilter = $('input[type="radio"][name="filter"]:checked').val();
+                var filterPoor = false, filterAverage = false, filterGood = false, filterExcellent = false;
+
+                if (selectedFilter === 'filterPoor') {
+                    filterPoor = true;
+                } else if (selectedFilter === 'filterAverage') {
+                    filterAverage = true;
+                } else if (selectedFilter === 'filterGood') {
+                    filterGood = true;
+                } else if (selectedFilter === 'filterExcellent') {
+                    filterExcellent = true;
+                }
+
+                $.ajax({
+                    url: '@Url.Action("ViewMoreStudentInClass", "ClassOfStudent", new { id = ViewBag.ClassId })',
+                    type: 'GET',
+                    data: {
+                        filterPoor: filterPoor,
+                        filterAverage: filterAverage,
+                        filterGood: filterGood,
+                        filterExcellent: filterExcellent
+                    },
+                    success: function (result) {
+                        $('#TableShowStudents tbody').html($(result).find('#TableShowStudents tbody').html());
+                    }
+                });
+            });
+        });
+    </script>
+}

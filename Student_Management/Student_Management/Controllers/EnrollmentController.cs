@@ -18,7 +18,7 @@ namespace Student_Management.Controllers
         {
             var enrollments = _studentDbContext.Enrollments
                 .Include(e => e.Student)
-                .Include(e => e.Class)
+                .Include(e => e.Course)
                     .ThenInclude(c => c.Subject)
                 .ToList();
 

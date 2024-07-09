@@ -19,7 +19,7 @@ namespace Student_Management.Controllers
             var scores = _studentDbContext.Scores
                 .Include(c => c.Student)
                 .Include(c => c.Subject)
-                .Include(c => c.Class)
+                .Include(c => c.Course)
                 .ToList();
             return View(scores);
         }
@@ -31,7 +31,7 @@ namespace Student_Management.Controllers
             {
                 // Tìm score cần xóa, id trung classId và studentId và subjectId
                 Score scoreToDelete = await _studentDbContext.Scores
-                    .SingleOrDefaultAsync(x => x.ClassId == classId && x.StudentId == studentId && x.SubjectId == subjectId);
+                    .SingleOrDefaultAsync(x => x.CourseId == classId && x.StudentId == studentId && x.SubjectId == subjectId);
 
                 if (scoreToDelete == null)
                 {

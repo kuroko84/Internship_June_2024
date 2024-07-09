@@ -20,5 +20,9 @@ namespace Student_Management.Models
 		
 		//Quan hệ 1-n với Score
 		public ICollection<Score>? Scores { get; set; }
-	}
+
+		// Khóa ngoại đến lớp của sinh viên
+		public int? ClassOfStudentId { get; set; }
+		public ClassOfStudent ClassOfStudent { get; set; }
+    }
 }

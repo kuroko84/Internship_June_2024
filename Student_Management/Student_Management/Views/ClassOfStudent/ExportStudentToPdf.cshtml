@@ -1,0 +1,44 @@
+﻿@using Student_Management.ViewModels
+@model StudentInfoViewModel
+
+@{
+    ViewData["Title"] = "Student Info";
+}
+
+<h2 class="title h2">@ViewData["Title"]</h2>
+<h3 class="text-success">@Model.ClassName</h3>
+<h3>ID: @Model.Id</h3>
+<h3>Name: @Model.Name</h3>
+<h3>Average Score: @Model.AverageMark</h3>
+<table border="1" cellspacing="0" cellpadding="5" class="full-width-table">
+    <thead class="table-active">
+        <tr>
+            <th>Subject</th>
+            <th>Mark</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var score in Model.Scores)
+        {
+            <tr>
+                <td>@score.SubjectName</td>
+                <td>@score.Mark</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .full-width-table {
+        width: 100%;
+        border-collapse: collapse; /* Đảm bảo các đường viền giữa các ô sát nhau */
+    }
+
+        .full-width-table th,
+        .full-width-table td {
+            padding: 5px; /* Khoảng cách giữa nội dung và viền của ô */
+            text-align: center; /* Căn giữa nội dung trong ô */
+            border: 1px solid black; /* Đường viền của bảng */
+        }
+</style>

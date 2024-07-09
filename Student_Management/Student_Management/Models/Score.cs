@@ -16,8 +16,8 @@ namespace Student_Management.Models
 		public int? StudentId { get; set; }
 		public Student Student { get; set; }
 
-        // Khóa ngoại đến Class
-        public int? ClassId { get; set; }
-        public Class Class { get; set; }
+        // Khóa ngoại đến Course
+        public int? CourseId { get; set; }
+        public Course Course { get; set; }
     }
 }

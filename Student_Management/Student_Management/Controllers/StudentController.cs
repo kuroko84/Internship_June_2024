@@ -4,6 +4,7 @@ using Student_Management.DBContext;
 using Student_Management.Models;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Student_Management.Controllers
 {
@@ -20,11 +21,17 @@ namespace Student_Management.Controllers
 
         public IActionResult Index()
         {
-            // Show students
             var students = _studentDbContext.Students
-                .Include(s => s.Enrollments)
-                .Include(e => e.Scores)
+                .Include(cs => cs.ClassOfStudent)
+                .Include(e => e.Enrollments)
                 .ToList();
+
+            if (students == null)
+            {
+                _logger.LogWarning("No students found in the database.");
+                students = new List<Student>();
+            }
+
             return View(students);
         }
 
@@ -56,7 +63,9 @@ namespace Student_Management.Controllers
 
         public IActionResult AddStudent()
         {
+            ViewBag.ClassOfStudents = new SelectList(_studentDbContext.ClassOfStudents.ToList(), "Id", "Name");
             return View();
+
         }
 
         // POST: AddStudent
@@ -64,29 +73,25 @@ namespace Student_Management.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddStudent(Student student)
         {
-            _logger.LogInformation("Received Student: {@student}", student);
-            // Nhiều khi ko cần thiết lawmcs cái Modelstate!!! LỖI
-            if (ModelState.IsValid)
+            if (student.ClassOfStudentId.HasValue)
             {
                 Student newStudent = new Student
                 {
                     Name = student.Name,
-                    DateOfBirth = student.DateOfBirth
+                    DateOfBirth = student.DateOfBirth,
+                    ClassOfStudentId = student.ClassOfStudentId,
                 };
                 _studentDbContext.Students.Add(newStudent);
                 await _studentDbContext.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            _logger.LogWarning("ModelState is invalid. Errors: {@errors}", ModelState.Values);
-
-            foreach (var modelState in ModelState.Values)
+            else
             {
-                foreach (var error in modelState.Errors)
-                {
-                    _logger.LogError("ModelState error: {ErrorMessage}", error.ErrorMessage);
-                }
+                TempData["InvalidData"] = "Please choose class";
             }
 
+
+            ViewBag.ClassOfStudents = new SelectList(_studentDbContext.ClassOfStudents.ToList(), "Id", "Name");
             return View(student);
         }
 

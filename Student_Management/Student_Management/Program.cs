@@ -17,6 +17,13 @@ builder.Services.AddControllersWithViews();
 // Add DinkToPdf config
 builder.Services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
 
+// Add Redis Cache
+builder.Services.AddDistributedRedisCache(options =>
+{
+	options.Configuration = "localhost:6379";
+	options.InstanceName = "redisOne";
+});
+
 
 var app = builder.Build();
 

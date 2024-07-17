@@ -3,15 +3,23 @@
 internal class Program
 {
     delegate int Operation(int x, int y);
+    
 
     private static void Main(string[] args)
     {
+        Action<int, int> prinInfo;
         int a, b;
         a = GetValidNumber("Enter number A: ");
         b = GetValidNumber("Enter number B: ");
 
         Action<int, int> infoAction = (a, b) => Console.WriteLine($"Hai so A va B lan luot la {a} va {b}.");
         Action<int, int> sumAndPrint = (a, b) => Console.WriteLine($"Tong hai so {a} va {b} la {a + b}");
+
+        prinInfo = infoAction;
+
+        prinInfo += sumAndPrint;
+
+        prinInfo(a, b);
 
         Predicate<int> isEven = number => number % 2 == 0;
 

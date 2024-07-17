@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DemoCallBackFunction")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a408a60f8e1a6914920dff08f2e0de3ada026abf")]
 [assembly: System.Reflection.AssemblyProductAttribute("DemoCallBackFunction")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DemoCallBackFunction")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

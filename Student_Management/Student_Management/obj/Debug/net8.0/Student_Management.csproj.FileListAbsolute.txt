@@ -139,3 +139,5 @@ C:\Users\Hii\Desktop\Internship\Internship_June_2024\Student_Management\Student_
 C:\Users\Hii\Desktop\Internship\Internship_June_2024\Student_Management\Student_Management\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\Hii\Desktop\Internship\Internship_June_2024\Student_Management\Student_Management\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\Hii\Desktop\Internship\Internship_June_2024\Student_Management\Student_Management\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\Student_Management\Student_Management\bin\Debug\net8.0\Microsoft.Extensions.Caching.Redis.dll
+C:\Users\Hii\Desktop\Internship\Internship_June_2024\Student_Management\Student_Management\bin\Debug\net8.0\StackExchange.Redis.StrongName.dll

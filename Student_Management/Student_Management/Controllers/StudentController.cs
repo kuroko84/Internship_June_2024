@@ -5,6 +5,8 @@ using Student_Management.Models;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Caching.Distributed;
+using Newtonsoft.Json;
 
 namespace Student_Management.Controllers
 {
@@ -12,28 +14,61 @@ namespace Student_Management.Controllers
     {
         private readonly StudentDbContext _studentDbContext;
         private readonly ILogger<StudentController> _logger;
+        private readonly IDistributedCache _distributedCache;
 
-        public StudentController(StudentDbContext studentDbContext, ILogger<StudentController> logger)
+        public StudentController(StudentDbContext studentDbContext,
+            ILogger<StudentController> logger,
+            IDistributedCache distributedCache
+            )
         {
             _studentDbContext = studentDbContext;
             _logger = logger;
+            this._distributedCache = distributedCache;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var students = _studentDbContext.Students
-                .Include(cs => cs.ClassOfStudent)
-                .Include(e => e.Enrollments)
-                .ToList();
+            var cachekey = "studentList";
 
-            if (students == null)
+            List<Student> students;
+
+            var serializedStudentList = await _distributedCache.GetStringAsync(cachekey);
+
+            if (!string.IsNullOrEmpty(serializedStudentList))
             {
-                _logger.LogWarning("No students found in the database.");
-                students = new List<Student>();
+                students = JsonConvert.DeserializeObject<List<Student>>(serializedStudentList);
+                _logger.LogInformation("Cache has values");
+            }
+            else
+            {
+                students = await _studentDbContext.Students
+                    .Include(cs => cs.ClassOfStudent)
+                    .Include(e => e.Enrollments)
+                    .ToListAsync();
+
+                if (students == null)
+                {
+                    _logger.LogWarning("No students found in the database!");
+                    students = new List<Student>();
+                }
+
+                var settings = new JsonSerializerSettings
+                {
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                };
+
+                serializedStudentList = JsonConvert.SerializeObject(students, settings);
+
+                var options = new DistributedCacheEntryOptions()
+                    .SetSlidingExpiration(TimeSpan.FromMinutes(60))
+                    .SetAbsoluteExpiration(TimeSpan.FromMinutes(10));
+                _logger.LogInformation("Cache hasn't any value");
+                await _distributedCache.SetStringAsync(cachekey, serializedStudentList, options);
             }
 
             return View(students);
         }
+
 
         public IActionResult More(int Id)
         {

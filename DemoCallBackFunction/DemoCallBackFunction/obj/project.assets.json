@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hii\\source\\repos\\DemoCallBackFunction\\DemoCallBackFunction\\DemoCallBackFunction.csproj",
+      "projectUniqueName": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\DemoCallBackFunction\\DemoCallBackFunction\\DemoCallBackFunction.csproj",
       "projectName": "DemoCallBackFunction",
-      "projectPath": "C:\\Users\\Hii\\source\\repos\\DemoCallBackFunction\\DemoCallBackFunction\\DemoCallBackFunction.csproj",
+      "projectPath": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\DemoCallBackFunction\\DemoCallBackFunction\\DemoCallBackFunction.csproj",
       "packagesPath": "C:\\Users\\Hii\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hii\\source\\repos\\DemoCallBackFunction\\DemoCallBackFunction\\obj\\",
+      "outputPath": "C:\\Users\\Hii\\Desktop\\Internship\\Internship_June_2024\\DemoCallBackFunction\\DemoCallBackFunction\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Hii\\AppData\\Roaming\\NuGet\\NuGet.Config",

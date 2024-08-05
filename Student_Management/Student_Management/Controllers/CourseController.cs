@@ -21,6 +21,17 @@ namespace Student_Management.Controllers
             _logger = logger;
         }
 
+        // GET: /Course/Index
+        public IActionResult Index()
+        {
+            var classes = _studentDbContext
+                .Courses
+                .Include(c => c.Subject)
+                .Include(c => c.Enrollments)
+                .ToList();
+            return View(classes);
+        }
+
         // GET: /Course/Create
         [HttpGet]
         public async Task<IActionResult> AddCourse()
@@ -52,7 +63,7 @@ namespace Student_Management.Controllers
             await _studentDbContext.SaveChangesAsync();
 
             _logger.LogInformation("Course created successfully.");
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Course");
 
         }
 
@@ -130,12 +141,6 @@ namespace Student_Management.Controllers
             }
 
             return RedirectToAction("ArrangeCourse", "Course", new { Id = enroll.CourseId });
-        }
-
-        //POST /Course/Index
-        public IActionResult Index()
-        {
-            return View();
         }
 
         // POST: /Course/UpdateScore

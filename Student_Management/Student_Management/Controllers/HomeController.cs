@@ -17,14 +17,31 @@ namespace Student_Management.Controllers
             _studentDbContext = studentDbContext;
         }
 
+        public async Task<IActionResult> GetDashBoard()
+        {
+            var allStudents = await _studentDbContext.Students.ToListAsync();
+            var allCourses = await _studentDbContext.Courses.ToListAsync();
+            var allClasses = await _studentDbContext.ClassOfStudents.ToListAsync();
+            var allScores = await _studentDbContext.Scores.ToListAsync();
+            var allSubjects = await _studentDbContext.Subjects.ToListAsync();
+            var allEnrollments = await _studentDbContext.Enrollments.ToListAsync();
+
+            var dashboardData = new
+            {
+                Students = allStudents,
+                Courses = allCourses,
+                Classes = allClasses,
+                Scores = allScores,
+                Subjects = allSubjects,
+                Enrollments = allEnrollments
+            };
+
+            return Json(dashboardData);
+        }
+
         public IActionResult Index()
         {
-            var classes = _studentDbContext
-                .Courses
-                .Include(c => c.Subject)
-                .Include(c => c.Enrollments)
-                .ToList();
-            return View(classes);
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

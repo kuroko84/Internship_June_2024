@@ -7,11 +7,14 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Caching.Distributed;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace Student_Management.Controllers
 {
+
     public class StudentController : Controller
     {
+
         private readonly StudentDbContext _studentDbContext;
         private readonly ILogger<StudentController> _logger;
         private readonly IDistributedCache _distributedCache;
@@ -25,7 +28,46 @@ namespace Student_Management.Controllers
             _logger = logger;
             this._distributedCache = distributedCache;
         }
+        //Load student from database async method
+        private async Task<List<Student>> LoadStudentsFromDatabaseAsync()
+        {
+            return await _studentDbContext.Students
+                .Include(cs => cs.ClassOfStudent)
+                .Include(e => e.Enrollments)
+                .ToListAsync();
+        }
+        //Update students in cache async method
+        private async Task UpdateStudentCacheAsync(string message)
+        {
+            var cachekey = "studentList";
 
+            List<Student> students;
+
+            var serializedStudentList = await _distributedCache.GetStringAsync(cachekey);
+
+            if (!string.IsNullOrEmpty(serializedStudentList))
+            {
+                _logger.LogInformation("Cache has values");
+                students = await _studentDbContext.Students
+                    .Include(cs => cs.ClassOfStudent)
+                    .Include(e => e.Enrollments)
+                    .ToListAsync();
+                var settings = new JsonSerializerSettings
+                {
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                };
+                serializedStudentList = JsonConvert.SerializeObject(students, settings);
+
+                var options = new DistributedCacheEntryOptions()
+                    .SetSlidingExpiration(TimeSpan.FromMinutes(10))
+                    .SetAbsoluteExpiration(TimeSpan.FromMinutes(5));
+                await _distributedCache.SetStringAsync(cachekey, serializedStudentList, options);
+                _logger.LogInformation("Cache updated after " + message);
+            }
+        }
+
+        //Get Student/Index
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             var cachekey = "studentList";
@@ -41,10 +83,7 @@ namespace Student_Management.Controllers
             }
             else
             {
-                students = await _studentDbContext.Students
-                    .Include(cs => cs.ClassOfStudent)
-                    .Include(e => e.Enrollments)
-                    .ToListAsync();
+                students = await LoadStudentsFromDatabaseAsync();
 
                 if (students == null)
                 {
@@ -60,8 +99,8 @@ namespace Student_Management.Controllers
                 serializedStudentList = JsonConvert.SerializeObject(students, settings);
 
                 var options = new DistributedCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromMinutes(60))
-                    .SetAbsoluteExpiration(TimeSpan.FromMinutes(10));
+                    .SetSlidingExpiration(TimeSpan.FromMinutes(10))
+                    .SetAbsoluteExpiration(TimeSpan.FromMinutes(5));
                 _logger.LogInformation("Cache hasn't any value");
                 await _distributedCache.SetStringAsync(cachekey, serializedStudentList, options);
             }
@@ -69,7 +108,8 @@ namespace Student_Management.Controllers
             return View(students);
         }
 
-
+        //GET: Student/More
+        [HttpGet]
         public IActionResult More(int Id)
         {
             // Trang xem thêm thông tin
@@ -77,19 +117,24 @@ namespace Student_Management.Controllers
             return View(newStudent);
         }
 
+        //POST: Student/Edit
         [HttpPost]
-        public IActionResult Edit(Student student)
+        public async Task<IActionResult> Edit(Student student)
         {
             // Tìm sinh viên cần chỉnh sửa
-            var existingStudent = _studentDbContext.Students.SingleOrDefault(s => s.Id == student.Id);
+            var existingStudent = await _studentDbContext.Students.SingleOrDefaultAsync(s => s.Id == student.Id);
             // Cập nhật thông tin
             existingStudent.Name = student.Name;
             existingStudent.DateOfBirth = student.DateOfBirth;
 
+            // Lưu thay đổi
             _studentDbContext.Students.Update(existingStudent);
 
             // Lưu thay đổi vào cơ sở dữ liệu
-            _studentDbContext.SaveChanges();
+            await _studentDbContext.SaveChangesAsync();
+
+            // Update cache
+            await UpdateStudentCacheAsync("edited");
 
             // Chuyển hướng đến action "More" của controller "Student" để hiển thị chi tiết sinh viên
             return RedirectToAction("Index", "Student");
@@ -103,7 +148,7 @@ namespace Student_Management.Controllers
 
         }
 
-        // POST: AddStudent
+        // POST: Student/AddStudent
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddStudent(Student student)
@@ -118,6 +163,8 @@ namespace Student_Management.Controllers
                 };
                 _studentDbContext.Students.Add(newStudent);
                 await _studentDbContext.SaveChangesAsync();
+                // Update cache
+                await UpdateStudentCacheAsync("added");
                 return RedirectToAction(nameof(Index));
             }
             else
@@ -125,12 +172,12 @@ namespace Student_Management.Controllers
                 TempData["InvalidData"] = "Please choose class";
             }
 
-
+            // Add Viewbag for view
             ViewBag.ClassOfStudents = new SelectList(_studentDbContext.ClassOfStudents.ToList(), "Id", "Name");
             return View(student);
         }
 
-        // POST: Delete
+        // POST: Student/Delete
         [HttpPost]
         public async Task<IActionResult> Delete(int Id)
         {
@@ -148,6 +195,9 @@ namespace Student_Management.Controllers
 
                 TempData["DeleteStudentSuccess"] = "Student deleted successfully.";
 
+                // Update cache
+                await UpdateStudentCacheAsync("delete");
+
                 // Redirect to the current page or specific action
                 return RedirectToAction("Index", "Student");
             }
@@ -156,6 +206,7 @@ namespace Student_Management.Controllers
                 return BadRequest(new { error = ex.Message });
             }
         }
+
 
     }
 }
